@@ -1,0 +1,205 @@
+{
+  "#Q9VRR0LP": [
+    {
+      "attackerTag": "#Q9VRR0LP",
+      "defenderTag": "#RC9YQ8YL",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "order": 14,
+      "duration": 88
+    },
+    {
+      "attackerTag": "#Q9VRR0LP",
+      "defenderTag": "#LYC9UG9R",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "order": 22,
+      "duration": 107
+    }
+  ],
+  "#RUYQUYPP": [
+    {
+      "attackerTag": "#RUYQUYPP",
+      "defenderTag": "#JVV8V2YQ",
+      "stars": 2,
+      "destructionPercentage": 98,
+      "order": 15,
+      "duration": 180
+    }
+  ],
+  "#JUJ2YC9L": [],
+  "#G09P0PUV0": [
+    {
+      "attackerTag": "#G09P0PUV0",
+      "defenderTag": "#QRUPGCGGG",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "order": 6,
+      "duration": 80
+    },
+    {
+      "attackerTag": "#G09P0PUV0",
+      "defenderTag": "#JVV8V2YQ",
+      "stars": 2,
+      "destructionPercentage": 94,
+      "order": 7,
+      "duration": 119
+    }
+  ],
+  "#2RPPRQYCP": [],
+  "#QV2J2LGC": [
+    {
+      "attackerTag": "#QV2J2LGC",
+      "defenderTag": "#9L0LRLQU0",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "order": 8,
+      "duration": 151
+    },
+    {
+      "attackerTag": "#QV2J2LGC",
+      "defenderTag": "#8LCG8YY2",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "order": 20,
+      "duration": 156
+    }
+  ],
+  "#P2YCUV9Y": [
+    {
+      "attackerTag": "#P2YCUV9Y",
+      "defenderTag": "#L820QRL",
+      "stars": 1,
+      "destructionPercentage": 24,
+      "order": 1,
+      "duration": 73
+    },
+    {
+      "attackerTag": "#P2YCUV9Y",
+      "defenderTag": "#8LCG8YY2",
+      "stars": 1,
+      "destructionPercentage": 26,
+      "order": 4,
+      "duration": 56
+    }
+  ],
+  "#G2VVVYYVP": [
+    {
+      "attackerTag": "#G2VVVYYVP",
+      "defenderTag": "#2CVLV9JC",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "order": 24,
+      "duration": 163
+    },
+    {
+      "attackerTag": "#G2VVVYYVP",
+      "defenderTag": "#8LG8LCVLQ",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "order": 25,
+      "duration": 167
+    }
+  ],
+  "#QYGGPJYJ": [],
+  "#P0G0928UY": [
+    {
+      "attackerTag": "#P0G0928UY",
+      "defenderTag": "#LRU8ULCLP",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "order": 16,
+      "duration": 146
+    },
+    {
+      "attackerTag": "#P0G0928UY",
+      "defenderTag": "#2PL9LPUGJ",
+      "stars": 2,
+      "destructionPercentage": 76,
+      "order": 17,
+      "duration": 151
+    }
+  ],
+  "#8809JP00G": [
+    {
+      "attackerTag": "#8809JP00G",
+      "defenderTag": "#29RRPU0RG",
+      "stars": 2,
+      "destructionPercentage": 76,
+      "order": 12,
+      "duration": 160
+    },
+    {
+      "attackerTag": "#8809JP00G",
+      "defenderTag": "#JVV8V2YQ",
+      "stars": 2,
+      "destructionPercentage": 92,
+      "order": 13,
+      "duration": 175
+    }
+  ],
+  "#8CL0JP9Q0": [
+    {
+      "attackerTag": "#8CL0JP9Q0",
+      "defenderTag": "#2PL9LPUGJ",
+      "stars": 2,
+      "destructionPercentage": 97,
+      "order": 21,
+      "duration": 131
+    },
+    {
+      "attackerTag": "#8CL0JP9Q0",
+      "defenderTag": "#QQQ2208C2",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "order": 23,
+      "duration": 73
+    }
+  ],
+  "#RU9098QQ": [
+    {
+      "attackerTag": "#RU9098QQ",
+      "defenderTag": "#29RRPU0RG",
+      "stars": 2,
+      "destructionPercentage": 91,
+      "order": 10,
+      "duration": 162
+    },
+    {
+      "attackerTag": "#RU9098QQ",
+      "defenderTag": "#L820QRL",
+      "stars": 3,
+      "destructionPercentage": 100,
+      "order": 11,
+      "duration": 90
+    }
+  ],
+  "#90Q2JRGG": [
+    {
+      "attackerTag": "#90Q2JRGG",
+      "defenderTag": "#QQQ2208C2",
+      "stars": 2,
+      "destructionPercentage": 97,
+      "order": 18,
+      "duration": 178
+    },
+    {
+      "attackerTag": "#90Q2JRGG",
+      "defenderTag": "#8LCG8YY2",
+      "stars": 1,
+      "destructionPercentage": 78,
+      "order": 19,
+      "duration": 179
+    }
+  ],
+  "#LCU99VC90": [
+    {
+      "attackerTag": "#LCU99VC90",
+      "defenderTag": "#29RRPU0RG",
+      "stars": 2,
+      "destructionPercentage": 79,
+      "order": 5,
+      "duration": 134
+    }
+  ]
+}
