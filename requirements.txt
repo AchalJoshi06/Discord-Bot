@@ -31,7 +31,9 @@ Pygments==2.19.2
 pypdf==6.9.1
 pytest==9.0.2
 python-dotenv==1.2.2
+requests==2.32.3
 PyYAML==6.0.3
+requests==2.32.0
 starlette==0.52.1
 typing-inspection==0.4.2
 typing_extensions==4.15.0
