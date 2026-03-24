@@ -3,6 +3,7 @@ import logging
 from typing import Dict, Any
 
 import discord
+import requests
 from discord import app_commands
 from discord.ext import commands
 
@@ -162,6 +163,34 @@ class RuntimeConfigCog(commands.Cog, name="RuntimeConfig"):
         else:
             val = get_effective_setting(key, default="(unset)", guild_id=(ctx.guild.id if ctx.guild else None))
         await ctx.send(f"⚙️ `{key}` = `{val}` ({scope})")
+
+    @commands.command(name="botip")
+    @commands.has_role(BOT_ADMIN_ROLE_ID)
+    async def check_bot_ip(self, ctx: commands.Context):
+        """Check the public IP address of the bot (for CoC API whitelisting)."""
+        try:
+            async with ctx.typing():
+                response = requests.get("https://api.ipify.org?format=json", timeout=5)
+                if response.status_code == 200:
+                    ip_data = response.json()
+                    public_ip = ip_data.get("ip", "Unable to determine")
+                    embed = discord.Embed(
+                        title="🌐 Bot Public IP Address",
+                        description=f"```\n{public_ip}\n```",
+                        color=discord.Color.blue()
+                    )
+                    embed.add_field(
+                        name="Use This For:",
+                        value="Whitelist in Clash of Clans API settings at https://developer.clashofclans.com",
+                        inline=False
+                    )
+                    embed.set_footer(text="CoC API Token → Edit → Whitelist this IP")
+                    await ctx.send(embed=embed)
+                else:
+                    await ctx.send("❌ Failed to retrieve IP address. Try again later.")
+        except Exception as e:
+            logger.error(f"Error checking bot IP: {e}")
+            await ctx.send(f"❌ Error: {str(e)}")
 
 
 async def setup(bot):
