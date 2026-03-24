@@ -1,0 +1,458 @@
+CC2 CLASH BOT - COMMANDS REFERENCE (CODE-ALIGNED)
+Version: 3.3
+Last Updated: 2026-03-24 (Cleanup: removed 10 unused endpoint commands, kept 3)
+
+Prefix:
+- Text prefix: cc2
+- Most commands are hybrid unless marked slash-only or text-only.
+
+Command Types:
+- Hybrid: slash + prefix
+- Slash-only: slash only
+- Text-only: prefix only
+- Group: parent command with subcommands
+
+Access Levels:
+- Everyone
+- Leadership
+- Admin
+
+===============================================================================
+1) PROFILE COMMANDS (cogs/profiles.py)
+===============================================================================
+
+1. info (alias: i)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /info [tag] | cc2 info [tag]
+
+2. profile (alias: pf)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /profile [tag] | cc2 profile [tag]
+
+3. p
+- Type: Text-only
+- Access: Everyone
+- Usage: cc2 p [c|d] [tag]
+
+4. upgradepriority (alias: upg)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /upgradepriority [tag] | cc2 upgradepriority [tag]
+
+5. compare (alias: cmp)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /compare <tag_a> <tag_b> | cc2 compare <tag_a> <tag_b>
+
+6. rushhistory (alias: rhs)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /rushhistory [tag] [limit] | cc2 rushhistory [tag] [limit]
+
+===============================================================================
+2) WAR COMMANDS (cogs/war.py)
+===============================================================================
+
+7. whohavenotattacked (alias: wna)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /whohavenotattacked [clan] | cc2 whohavenotattacked [clan]
+
+8. warmap (alias: wm)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /warmap [clan] | cc2 warmap [clan]
+
+9. opponentlineup (alias: ol)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /opponentlineup [clan] | cc2 opponentlineup [clan]
+
+10. warreminder (alias: wr)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /warreminder <on|off> | cc2 warreminder <on|off>
+
+11. warhistory (alias: wh)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /warhistory [clan] [limit] | cc2 warhistory [clan] [limit]
+
+12. warperformance (alias: wp)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /warperformance [tag] | cc2 warperformance [tag]
+
+13. rankings (alias: rank)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /rankings <clan|player> [location] [limit] | cc2 rankings <clan|player> [location] [limit]
+- Description: Home village clan or player trophy rankings by location
+
+14. labels (alias: lbl)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /labels <clan|player> | cc2 labels <clan|player>
+- Description: Display available clan or player labels
+
+15. locations (alias: loc)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /locations [search] | cc2 locations [search]
+- Description: Search and list available locations (countries)
+
+===============================================================================
+3) RAID COMMANDS (cogs/raids.py)
+===============================================================================
+
+16. raidstatus (alias: rs)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /raidstatus [clan] | cc2 raidstatus [clan]
+
+17. raidhistory (alias: rh)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /raidhistory [clan] [limit] | cc2 raidhistory [clan] [limit]
+
+18. raidtrends (alias: rt)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /raidtrends [clan] [weekends] | cc2 raidtrends [clan] [weekends]
+
+19. raidsleft (alias: rl)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /raidsleft [clan] | cc2 raidsleft [clan]
+
+20. raidreminder (alias: rr)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /raidreminder <on|off> | cc2 raidreminder <on|off>
+
+===============================================================================
+4) DONATION COMMANDS (cogs/donations_cog.py)
+===============================================================================
+
+21. donations (alias: don)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /donations [tag] | cc2 donations [tag]
+
+22. donationhistory (alias: dh)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /donationhistory [clan] [months] [scope] | cc2 donationhistory [clan] [months] [scope]
+
+23. takesnapshot (alias: ts)
+- Type: Hybrid
+- Access: Leadership
+- Usage: /takesnapshot [clan] [scope] | cc2 takesnapshot [clan] [scope]
+
+===============================================================================
+5) LEADERBOARD COMMANDS (cogs/leaderboards.py)
+===============================================================================
+
+24. top (alias: lb)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /top [category] [clan] [scope] | cc2 top [category] [clan] [scope]
+
+25. myrank (alias: mr)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /myrank [category] [clan] [tag] [scope] | cc2 myrank [category] [clan] [tag] [scope]
+
+===============================================================================
+6) ACHIEVEMENT COMMANDS (cogs/achievements.py)
+===============================================================================
+
+26. achievements (alias: ach)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /achievements [tag] | cc2 achievements [tag]
+
+27. milestone (alias: ms)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /milestone [tag] | cc2 milestone [tag]
+
+28. scanachievements (alias: scanach)
+- Type: Hybrid
+- Access: Leadership
+- Usage: /scanachievements | cc2 scanachievements
+
+29. addachievement (alias: addach)
+- Type: Hybrid
+- Access: Leadership
+- Usage: /addachievement <name> <description> <metric> <threshold> | cc2 addachievement <name> <description> <metric> <threshold>
+
+===============================================================================
+7) CHALLENGE COMMANDS (cogs/challenges.py)
+===============================================================================
+
+30. challenge (alias: ch)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /challenge | cc2 challenge
+
+===============================================================================
+8) RUNTIME CONFIG COMMANDS (cogs/runtime_config.py)
+===============================================================================
+
+31. config (alias: cfg)
+- Type: Hybrid Group
+- Access: Leadership
+- Usage: /config | cc2 config
+
+32. config set (alias: cset)
+- Type: Group Subcommand
+- Access: Leadership
+- Usage: /config set <key> <value> [scope] | cc2 config set <key> <value> [scope]
+
+33. config get (alias: cget)
+- Type: Group Subcommand
+- Access: Leadership
+- Usage: /config get <key> [scope] | cc2 config get <key> [scope]
+
+===============================================================================
+9) ADMIN + UTILITY COMMANDS (cogs/admin.py)
+===============================================================================
+
+31. help (alias: h)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /help | cc2 help
+
+32. link (alias: ln)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /link <tag> | cc2 link <tag>
+
+33. setmain (alias: mainacc)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /setmain <tag> | cc2 setmain <tag>
+
+34. unlink (alias: unln)
+- Type: Text-only
+- Access: Everyone
+- Usage: cc2 unlink
+
+35. whois (alias: wi)
+- Type: Text-only
+- Access: Everyone
+- Usage: cc2 whois
+
+36. status (alias: st)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /status | cc2 status
+
+37. calculate (alias: calc)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /calculate <expression> | cc2 calculate <expression>
+
+38. maintenance (alias: maint)
+- Type: Hybrid
+- Access: Leadership
+- Usage: /maintenance <on|off> [message] | cc2 maintenance <on|off> [message]
+
+39. maintstatus (alias: mstat)
+- Type: Hybrid
+- Access: Leadership
+- Usage: /maintstatus | cc2 maintstatus
+
+40. remind (alias: rm)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /remind <message> <duration> | cc2 remind <message> <duration>
+
+41. clearbot (alias: cb)
+- Type: Hybrid
+- Access: Admin
+- Usage: /clearbot [limit] | cc2 clearbot [limit]
+
+42. clear (alias: cg)
+- Type: Hybrid
+- Access: Admin
+- Usage: /clear <@user> [limit] | cc2 clear <@user> [limit]
+
+43. roster (alias: ros)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /roster [clan] | cc2 roster [clan]
+
+44. kicksuggestions (alias: ks)
+- Type: Hybrid
+- Access: Leadership
+- Usage: /kicksuggestions [clan] | cc2 kicksuggestions [clan]
+
+45. inactive (alias: ia)
+- Type: Hybrid
+- Access: Leadership
+- Usage: /inactive [clan] [days] | cc2 inactive [clan] [days]
+
+46. clearcache
+- Type: Slash-only
+- Access: Leadership
+- Usage: /clearcache
+
+47. cleanup
+- Type: Slash-only
+- Access: Leadership
+- Usage: /cleanup [force]
+
+48. syncroles
+- Type: Slash-only
+- Access: Leadership
+- Usage: /syncroles <clan_tag|ALL>
+
+49. addclan
+- Type: Slash-only
+- Access: Leadership
+- Usage: /addclan <name> <tag>
+
+50. removeclan
+- Type: Slash-only
+- Access: Leadership
+- Usage: /removeclan <clan>
+
+51. addbase (alias: ab)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /addbase ... | cc2 addbase ...
+
+52. setbase
+- Type: Slash-only
+- Access: Everyone
+- Usage: /setbase <base_type> <link> <name> [tag]
+
+53. fetchbase (alias: fb)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /fetchbase [town_hall] [style] [type] [tag] | cc2 fetchbase ...
+
+54. addattack (alias: aatk)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /addattack <th> <style> <title> <strategy> [link] | cc2 addattack ...
+
+55. fetchattack (alias: fatk)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /fetchattack [th] [style] [query] [limit] | cc2 fetchattack ...
+
+56. getbase
+- Type: Slash-only
+- Access: Everyone
+- Usage: /getbase <base_type> [town_hall] [tag]
+
+57. basebook
+- Type: Slash-only
+- Access: Everyone
+- Usage: /basebook [town_hall] [tag]
+
+58. botstats (alias: bs)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /botstats | cc2 botstats
+
+59. findplayer (alias: fp)
+- Type: Hybrid
+- Access: Leadership
+- Usage: /findplayer <name> [scope] | cc2 findplayer <name> [scope]
+
+60. familyreport (alias: fr)
+- Type: Hybrid
+- Access: Leadership
+- Usage: /familyreport [scope] | cc2 familyreport [scope]
+
+61. promotionsuggestions (alias: ps)
+- Type: Hybrid
+- Access: Leadership
+- Usage: /promotionsuggestions [clan] | cc2 promotionsuggestions [clan]
+
+62. poll (alias: pl)
+- Type: Hybrid
+- Access: Leadership
+- Usage: /poll <question> <opt1;opt2;...> [duration] [single|multi] | cc2 poll ...
+
+63. createevent (alias: ce)
+- Type: Hybrid
+- Access: Admin
+- Usage: /createevent <title> <start> [duration_hours] [description] [location] | cc2 createevent ...
+
+64. welcome (alias: wel)
+- Type: Hybrid
+- Access: Leadership
+- Usage: /welcome <tag> | cc2 welcome <tag>
+
+65. test-join (aliases: testjoin, tj)
+- Type: Text-only
+- Access: Everyone
+- Usage: cc2 test-join
+
+66. wartrends (alias: wt)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /wartrends [clan] [wars] | cc2 wartrends [clan] [wars]
+
+67. misstreak (alias: ms2)
+- Type: Hybrid
+- Access: Leadership
+- Usage: /misstreak [clan] [min_streak] | cc2 misstreak [clan] [min_streak]
+
+68. attacklog (alias: atklog)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /attacklog <tag> [limit] | cc2 attacklog <tag> [limit]
+
+69. warrating (alias: wrate)
+- Type: Hybrid
+- Access: Leadership
+- Usage: /warrating <win|loss|tie> [note] [clan] | cc2 warrating <win|loss|tie> [note] [clan]
+
+70. transferlog (alias: tlog)
+- Type: Hybrid
+- Access: Leadership
+- Usage: /transferlog [limit] [scope] | cc2 transferlog [limit] [scope]
+
+71. warpreview (alias: wpv)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /warpreview [clan] | cc2 warpreview [clan]
+
+72. clanhealth (alias: chl)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /clanhealth [clan] [scope] | cc2 clanhealth [clan] [scope]
+
+73. raidreport (alias: rrpt)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /raidreport [clan] | cc2 raidreport [clan]
+
+74. onboardingdm (alias: odm)
+- Type: Hybrid
+- Access: Leadership
+- Usage: /onboardingdm <member> [force] | cc2 onboardingdm <member> [force]
+
+75. upgradecheck (alias: uc)
+- Type: Hybrid
+- Access: Everyone
+- Usage: /upgradecheck [min_heroes] [clan] | cc2 upgradecheck [min_heroes] [clan]
+
+===============================================================================
+TOTALS (ACTIVE CODEBASE)
+===============================================================================
+- 78 command entries (includes group and subcommands, 3 endpoint commands kept: rankings, labels, locations)
+- upgradecheck restored with hybrid slash/prefix support
+
+Notes:
+- Maintenance mode blocks non-leadership command execution.
+- Some operational checks are role-gated by leadership/admin ids.
+- This reference file numbering is auto-generated; run scripts/generate_command_inventory.py to regenerate BOT_DOCUMENTATION.md with current decorators.
