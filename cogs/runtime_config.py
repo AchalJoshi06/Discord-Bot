@@ -165,7 +165,6 @@ class RuntimeConfigCog(commands.Cog, name="RuntimeConfig"):
         await ctx.send(f"⚙️ `{key}` = `{val}` ({scope})")
 
     @commands.command(name="botip")
-    @commands.has_role(BOT_ADMIN_ROLE_ID)
     async def check_bot_ip(self, ctx: commands.Context):
         """Check the public IP address of the bot (for CoC API whitelisting)."""
         try:
