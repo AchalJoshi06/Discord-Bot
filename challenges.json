@@ -1,0 +1,26 @@
+{
+  "2026-W12": {
+    "id": "trophy_push",
+    "type": "trophies",
+    "goal": 50000,
+    "title": "Trophy Climb",
+    "description": "This week's challenge: reach a combined 50,000 trophies.",
+    "week": "2026-W12",
+    "created_at": "2026-03-19T06:46:56.298171+00:00",
+    "posted": false,
+    "friday_update_sent": false,
+    "sunday_result_sent": false
+  },
+  "2026-W13": {
+    "id": "war_star_push",
+    "type": "war_stars",
+    "goal": 200,
+    "title": "War Star Push",
+    "description": "This week's challenge: earn 200 war stars across tracked clans.",
+    "week": "2026-W13",
+    "created_at": "2026-03-23T15:37:52.779463+00:00",
+    "posted": true,
+    "friday_update_sent": false,
+    "sunday_result_sent": false
+  }
+}

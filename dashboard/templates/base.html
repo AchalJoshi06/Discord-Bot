@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title or "CC2 Dashboard" }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="/" class="brand">CC2 Dashboard</a>
+    <nav>
+      {% if user %}
+      <span class="user-pill">{{ user.global_name }}</span>
+      {% endif %}
+      <form method="get" action="/" class="clan-switcher">
+        <label for="clanTag" class="sr-only">Select clan</label>
+        <select id="clanTag" onchange="if(this.value){window.location='/clan/'+encodeURIComponent(this.value.replace('#',''))}">
+          <option value="">Jump to clan</option>
+          {% for c in clans %}
+          <option value="{{ c.tag }}" {% if clan and clan.tag == c.tag %}selected{% endif %}>{{ c.name }} ({{ c.tag }})</option>
+          {% endfor %}
+        </select>
+      </form>
+      {% if user %}
+      <a class="top-action" href="/admin">Admin</a>
+      {% endif %}
+      {% if user %}
+      <a class="top-action" href="/auth/logout">Logout</a>
+      {% else %}
+      <a class="top-action" href="/auth/login">Login with Discord</a>
+      {% endif %}
+    </nav>
+  </header>
+
+  <main class="shell">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

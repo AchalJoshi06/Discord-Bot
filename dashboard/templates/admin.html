@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero compact">
+  <h1>Dashboard Admin</h1>
+  <p>Run kick suggestions, export roster CSV, and manage basebook entries.</p>
+  {% if message %}<p class="notice success">{{ message }}</p>{% endif %}
+  {% if error %}<p class="notice error">{{ error }}</p>{% endif %}
+</section>
+
+<section class="card">
+  <h2>Clan Controls</h2>
+  <form method="get" action="/admin" class="inline-form">
+    <label for="clan_tag">Clan</label>
+    <select id="clan_tag" name="clan_tag">
+      {% for c in clans %}
+      <option value="{{ c.tag }}" {% if c.tag == selected_tag %}selected{% endif %}>{{ c.name }} ({{ c.tag }})</option>
+      {% endfor %}
+    </select>
+    <button type="submit" class="button">Load</button>
+    {% if clan %}
+    <a class="top-action" href="/admin/roster.csv?clan_tag={{ clan.tag }}">Export Roster CSV</a>
+    {% endif %}
+  </form>
+</section>
+
+<section class="card">
+  <h2>Kick Suggestions Snapshot</h2>
+  {% if kick_lines %}
+  <ul class="plain-list">
+    {% for line in kick_lines %}
+    <li>{{ line }}</li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No kick suggestions from current dashboard data.</p>
+  {% endif %}
+</section>
+
+<section class="card">
+  <h2>Basebook Management</h2>
+  <form method="get" action="/admin" class="inline-form stacked-mobile">
+    <label for="player_tag">Player Tag</label>
+    <input id="player_tag" name="player_tag" value="{{ player_tag or '' }}" placeholder="#PQUCURCQ" required />
+    {% if clan %}<input type="hidden" name="clan_tag" value="{{ clan.tag }}" />{% endif %}
+    <button type="submit" class="button">Load Basebook</button>
+  </form>
+
+  {% if player_tag %}
+  <div class="basebook-block">
+    <h3>{{ player_tag }}</h3>
+    {% if basebook %}
+      {% for t, entries in basebook.items() %}
+      <div class="base-type">
+        <h4>{{ t }}</h4>
+        <ul class="plain-list">
+          {% for e in entries %}
+          <li><strong>{{ e.name }}</strong> - <a href="{{ e.link }}" target="_blank" rel="noreferrer">open link</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    {% else %}
+      <p>No saved bases for this player.</p>
+    {% endif %}
+
+    <form method="post" action="/admin/basebook/add" class="inline-form stacked-mobile">
+      <input type="hidden" name="player_tag" value="{{ player_tag }}" />
+      <label for="base_type">Type</label>
+      <select id="base_type" name="base_type">
+        <option value="war">war</option>
+        <option value="legend">legend</option>
+        <option value="anti2">anti2</option>
+        <option value="blizzard">blizzard</option>
+      </select>
+      <label for="name">Name</label>
+      <input id="name" name="name" required placeholder="War Base A" />
+      <label for="link">Link</label>
+      <input id="link" name="link" required placeholder="https://link.clashofclans.com/..." />
+      <button type="submit" class="button">Save Base</button>
+    </form>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

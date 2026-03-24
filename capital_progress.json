@@ -1,0 +1,31 @@
+{
+  "#PQUCURCQ": {
+    "capital_hall_level": 10,
+    "district_levels": {
+      "Capital Peak": 10,
+      "Barbarian Camp": 5,
+      "Wizard Valley": 5,
+      "Balloon Lagoon": 5,
+      "Builder's Workshop": 5,
+      "Dragon Cliffs": 5,
+      "Golem Quarry": 5,
+      "Skeleton Park": 4,
+      "Goblin Mines": 4
+    },
+    "updated_at": "2026-03-23T15:42:23.510634+00:00"
+  },
+  "#2JJJCCRQR": {
+    "capital_hall_level": 8,
+    "district_levels": {
+      "Capital Peak": 8,
+      "Barbarian Camp": 4,
+      "Wizard Valley": 4,
+      "Balloon Lagoon": 3,
+      "Builder's Workshop": 3,
+      "Dragon Cliffs": 3,
+      "Golem Quarry": 3,
+      "Skeleton Park": 2
+    },
+    "updated_at": "2026-03-23T15:42:23.526617+00:00"
+  }
+}

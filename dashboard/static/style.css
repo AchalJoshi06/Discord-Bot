@@ -1,0 +1,303 @@
+:root {
+  --bg: #f4f7f2;
+  --ink: #172554;
+  --accent: #0f766e;
+  --card: #ffffff;
+  --muted: #475569;
+  --line: #cbd5e1;
+  --warm: #f59e0b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 10% 10%, #bbf7d0 0, transparent 30%),
+    radial-gradient(circle at 95% 20%, #bae6fd 0, transparent 35%),
+    linear-gradient(140deg, #f8fafc 0%, var(--bg) 60%, #ecfccb 100%);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.75);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.brand {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.user-pill {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.88rem;
+}
+
+.top-action {
+  text-decoration: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  border-radius: 0.7rem;
+  padding: 0.45rem 0.65rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.clan-switcher select {
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: #fff;
+  color: var(--ink);
+  min-width: 13rem;
+}
+
+.shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1.2rem;
+}
+
+.hero {
+  margin-bottom: 1rem;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--line);
+  background: linear-gradient(130deg, rgba(15,118,110,0.1) 0%, rgba(245,158,11,0.08) 100%);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+}
+
+.hero p {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.cards {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.metrics {
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
+.charts {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 1rem;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1rem;
+  background: var(--card);
+  box-shadow: 0 14px 30px rgba(2, 6, 23, 0.06);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.card .tag {
+  color: var(--muted);
+  margin: 0.35rem 0 0.9rem;
+  font-family: "IBM Plex Mono", Consolas, monospace;
+}
+
+.card dl {
+  margin: 0 0 1rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.card dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.card dt {
+  color: var(--muted);
+}
+
+.card dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.metric p {
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(100deg, var(--accent), #0ea5e9);
+  padding: 0.55rem 0.9rem;
+  border-radius: 0.7rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.notice {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.65rem;
+  margin-top: 0.8rem;
+  font-size: 0.92rem;
+}
+
+.notice.success {
+  background: #dcfce7;
+  color: #14532d;
+}
+
+.notice.error {
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
+.inline-form {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.inline-form label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.inline-form input,
+.inline-form select {
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+  padding: 0.45rem 0.6rem;
+  min-width: 11rem;
+}
+
+.plain-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.basebook-block {
+  margin-top: 0.8rem;
+}
+
+.base-type {
+  border-top: 1px dashed var(--line);
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+}
+
+.base-type h4 {
+  margin: 0;
+}
+
+.table-card {
+  overflow: hidden;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.65rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.94rem;
+}
+
+th {
+  color: var(--muted);
+}
+
+.mono {
+  font-family: "IBM Plex Mono", Consolas, monospace;
+}
+
+.empty-cell {
+  text-align: center;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 720px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  th,
+  td {
+    font-size: 0.85rem;
+  }
+
+  .stacked-mobile {
+    display: grid;
+    gap: 0.5rem;
+  }
+}

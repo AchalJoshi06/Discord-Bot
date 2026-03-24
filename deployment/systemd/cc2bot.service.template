@@ -1,0 +1,22 @@
+[Unit]
+Description=CC2 Discord Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/cc2-discord-bot
+Environment="PYTHONUNBUFFERED=1"
+Environment="DISCORD_BOT_TOKEN=REPLACE_WITH_TOKEN"
+ExecStart=/opt/cc2-discord-bot/.venv/bin/python /opt/cc2-discord-bot/discordwelcomebot.py
+Restart=on-failure
+RestartSec=5
+
+# Optional hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

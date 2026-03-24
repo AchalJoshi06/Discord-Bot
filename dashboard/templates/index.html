@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+  <h1>Read-only command center</h1>
+  <p>Live snapshots from your bot datasets with no write actions.</p>
+</section>
+
+<section class="grid cards">
+  {% if cards %}
+    {% for card in cards %}
+    <article class="card">
+      <h2>{{ card.name }}</h2>
+      <p class="tag">{{ card.tag }}</p>
+      <dl>
+        <div><dt>Members</dt><dd>{{ card.member_count }}</dd></div>
+        <div><dt>Latest Donations</dt><dd>{{ "{:,}".format(card.latest_total_donations) }}</dd></div>
+        <div><dt>Wars Tracked</dt><dd>{{ card.wars_tracked }}</dd></div>
+        <div><dt>Avg Raid Completion</dt><dd>{{ card.avg_raid_completion }}%</dd></div>
+      </dl>
+      <a class="button" href="/clan/{{ card.tag.replace('#', '') }}">Open Clan Dashboard</a>
+    </article>
+    {% endfor %}
+  {% else %}
+    <article class="card empty">
+      <h2>No clan data found</h2>
+      <p>Set up clans and snapshots in the bot first, then refresh this page.</p>
+    </article>
+  {% endif %}
+</section>
+{% endblock %}
